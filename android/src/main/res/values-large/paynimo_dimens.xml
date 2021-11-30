@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- LAYOUT INFO LABEL TEXT Size Dimensions -->
+    <dimen name="paynimo_info_label_textSize">18sp</dimen>
+    
+    <!-- LAYOUT PADDING Dimensions -->
+    <dimen name="paynimo_default_layout_padding">25dp</dimen>
+
+    <!-- Checkbox Dimensions -->
+    <dimen name="paynimo_checkbox_textSize">20sp</dimen>
+
+    <!-- RadioButton Dimensions -->
+    <dimen name="paynimo_radioButton_textSize">20sp</dimen>
+
+    <!-- Button Dimensions -->
+    <dimen name="paynimo_buttonDefaultStrokeWidth">1dp</dimen>
+    <dimen name="paynimo_buttonDefaultCornerRadius">10dp</dimen>
+    <dimen name="paynimo_buttonPressedStrokeWidth">1dp</dimen>
+    <dimen name="paynimo_buttonPressedCornerRadius">10dp</dimen>
+    <dimen name="paynimo_buttonVerticalPadding">5dp</dimen>
+    <dimen name="paynimo_buttonHorizontalPadding">10dp</dimen>
+    <dimen name="paynimo_button_textSize">23sp</dimen>
+    <dimen name="paynimo_button_padding_left">15dp</dimen>
+    <dimen name="paynimo_button_padding_top">15dp</dimen>
+
+    <!-- EditText Dimensions -->
+    <dimen name="paynimo_customEditTextVerticalPadding">3dp</dimen>
+    <dimen name="paynimo_customEditTextHorizontalPadding">8dp</dimen>
+    <dimen name="paynimo_editText_textSize">19sp</dimen>
+    <dimen name="paynimo_editText_padding_left">15dp</dimen>
+    <dimen name="paynimo_editText_padding_top">5dp</dimen>
+
+    <!-- TextView Dimensions -->
+    <dimen name="paynimo_textView_textSize_vault_heading">15sp</dimen>
+    <dimen name="paynimo_textView_textSize_normal">20sp</dimen>
+    <dimen name="paynimo_textView_textSize_small">12sp</dimen>
+    <dimen name="paynimo_textView_textSize_address">14sp</dimen>
+    <dimen name="paynimo_textView_textSize_large">25sp</dimen>
+    <dimen name="paynimo_textView_padding_left">15dp</dimen>
+    <dimen name="paynimo_textView_padding_top">15dp</dimen>
+    <dimen name="paynimo_textimage_size">30sp</dimen>
+
+    <!-- Payment Tab button Dimensions -->
+    <dimen name="paynimo_switchButtonLeftNotPressedStrokeWidth">1dp</dimen>
+    <dimen name="paynimo_switchButtonLeftPressedStrokeWidth">1dp</dimen>
+    <dimen name="paynimo_switchButtonPressedStrokeWidth">1dp</dimen>
+    <dimen name="paynimo_switchButtonVerticalPadding">5dp</dimen>
+    <dimen name="paynimo_switchButtonHorizontalPadding">10dp</dimen>
+    <dimen name="paynimo_custom_radio_button_padding_top">12dp</dimen>
+    <dimen name="paynimo_custom_radio_button_padding_left">20dp</dimen>
+    <dimen name="paynimo_custom_radio_button_textSize">25sp</dimen>
+
+    <!-- Safestore Chooser Dimensions -->
+    <dimen name="paynimo_safestoreChooserSize">18sp</dimen>
+    <dimen name="paynimo_chooserItemMarginTop">15dp</dimen>
+    <dimen name="paynimo_chooserItemMarginBottom">15dp</dimen>
+    <dimen name="paynimo_chooserItemMarginSide">5dp</dimen>
+    <dimen name="paynimo_chooserItemMarginLeft">12dp</dimen>
+    <dimen name="paynimo_chooserButtonWidth">100dp</dimen>
+    <dimen name="paynimo_chooserButtonWidthReset">210dp</dimen>
+
+    <!-- PaymentItem Dimensions -->
+    <dimen name="paynimo_paymentItemMarginSide">5dp</dimen>
+    <dimen name="paynimo_paymentItemImageSize">32dp</dimen>
+    <dimen name="paynimo_paymentItemSeparatorMargin">2dp</dimen>
+    <dimen name="paynimo_paymentItemMarginTop">20dp</dimen>
+    <dimen name="paynimo_paymentItemInnerMargin">5dp</dimen>
+    <dimen name="paynimo_paymentItemHolderNameSize">25dp</dimen>
+    <dimen name="paynimo_paynimo_paymentItemLogoWidth">75dp</dimen>
+    <dimen name="paynimo_paymentItemLogoHeight">25dp</dimen>
+    <dimen name="paynimo_paymentItemCardNumberSize">16dp</dimen>
+
+</resources>

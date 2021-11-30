@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paynimo_backgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/paynimo_backgroundColor">
+        <ImageView
+            android:id="@+id/paynimo_img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@drawable/paynimo_logo" />
+        <WebView
+            android:id="@+id/paynimo_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_alignLeft="@id/paynimo_img_logo"
+            android:layout_alignRight="@id/paynimo_img_logo"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_below="@id/paynimo_img_logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/paynimo_defaultTextColor"
+            android:layout_below="@id/paynimo_webview"
+            android:text="Please Wait..." />
+    </RelativeLayout>
+
+</LinearLayout>

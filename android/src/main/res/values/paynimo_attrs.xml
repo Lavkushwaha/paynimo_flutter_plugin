@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="borderColor" format="color|reference" />
+        <attr name="inactiveBorderColor" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ButteryProgressBar">
+        <attr name="barColor" format="color" />
+        <attr name="barHeight" format="dimension" />
+        <attr name="detentWidth" format="dimension" />
+    </declare-styleable>
+
+</resources>

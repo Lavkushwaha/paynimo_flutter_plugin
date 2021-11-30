@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/paynimo_list_selector"
+    android:padding="3dp" >
+
+    <!-- payment mode Image -->
+
+    <TextView
+        android:id="@+id/paynimo_list_pm_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="@dimen/paynimo_textimage_size"
+        android:textColor="@color/defaultTextColor" />
+
+    <!-- right arrow Image -->
+
+
+    <!-- lable -->
+
+    <com.paynimo.android.payment.CustomTextView
+        android:id="@+id/paynimo_list_pm_text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toLeftOf="@+id/paynimo_list_arrow_icon"
+        android:layout_toRightOf="@+id/paynimo_list_pm_icon"
+        android:text=""
+        android:textColor="@color/paynimo_textViewTextColor"
+        android:textSize="@dimen/paynimo_textView_textSize_normal" />
+
+    <TextView
+        android:id="@+id/paynimo_list_arrow_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/paynimo_textView_textSize_normal" />
+        <!--android:textColor="@color/defaultTextColor" /> -->
+
+</RelativeLayout>

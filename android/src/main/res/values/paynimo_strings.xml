@@ -1,0 +1,198 @@
+<resources>
+
+    <string name="paynimo_trigger_default">Pay</string>
+    <!-- AlertDialog connection Error -->
+    <string name="paynimo_alert_dialog_connection_error_heading">No Internet Connection</string>
+    <string name="paynimo_connection_error">Unable to load content. Check your network connection.</string>
+    <!-- Loader text -->
+    <string name="paynimo_loader_label">Please wait...</string>
+    <!-- Font Style Path -->
+    <string name="paynimo_fontpath">fonts/roboto_regular_webfont.ttf</string>
+    <string name="paynimo_icons_fontpath">fonts/paynimo_icons.ttf</string>
+    <!-- REQUESTED_PAYMENT_MODE -->
+    <string name="paynimo_requested_payment_method_error">Please Change Your Requested Payment Mode</string>
+
+    <!-- PAYMENT MODES -->
+    <string name="paynimo_payment_mode_label">PAYMENT OPTIONS</string>
+    <string name="paynimo_payment_mode_amount_label">Amount </string>
+    <string name="paynimo_payment_mode_amount_rupee_label">Q</string>
+    <string name="paynimo_alert_delete_card">Are you sure you want to delete this card?</string>
+    <string name="paynimo_alert_yes">Yes</string>
+    <string name="paynimo_alert_no">No</string>
+
+    <!-- Card -->
+    <string name="paynimo_cc_number_label">Card number</string>
+    <string name="paynimo_cc_number_hint">CARD NUMBER</string>
+    <string name="paynimo_cc_expdate_label">Expiry date</string>
+    <string name="paynimo_cc_date_hint">MM/YY</string>
+    <string name="paynimo_cc_date_separator">/</string>
+    <string name="paynimo_cc_verification_label">Verification number</string>
+    <string name="paynimo_cc_verification_hint">CVV </string>
+    <string name="paynimo_cc_holder_name_hint">CARD HOLDER NAME(OPTIONAL)</string>
+    <string name="paynimo_cc_holder_name_label">Card holder name</string>
+    <string name="paynimo_cc_radio_fresh_label">Pay with another card</string>
+    <string name="paynimo_cc_radio_vault_label">Express pay with your saved cards</string>
+    <string name="paynimo_cc_spinner_label">Select your preferred card for this payment</string>
+    <string name="paynimo_cc_checkbox_label">Remember this card for the next time</string>
+    <string name="paynimo_cc_user_message_label">Your information is secured using industry standard encryption</string>
+    <string name="paynimo_cc_field_info_label">Please enter  available fields of the  Card </string>
+    <string name="paynimo_cc_vault_field_info_label">Please enter CVV if available on Card </string>
+    <string name="paynimo_cc_checkbox_si_label">Register for Auto-Debit</string>
+    <string name="paynimo_cc_si_view_detail_label">Show SI Details</string>
+    <string name="paynimo_cc_si_validation_error_message">Please submit all SI required fields</string>
+    <string name="paynimo_cc_si_validation_account_no_error_message">Please Enter Account Number</string>
+
+    <string name="paynimo_cc_card_validation_error_message">This card is not enabled for you. Please try with some other card.</string>
+    
+
+    <!-- <string name="paynimo_cc_btn_paywith_otp_label">Pay using OTP</string> -->
+
+    <string name="paynimo_cc_checkbox_auto_sms_label">Auto SMS Generation</string>
+    <string name="paynimo_cc_btn_paywith_otp_label">Pay</string>
+    <string name="paynimo_cc_btn_paywith_3d_label">Pay using 3D Secure</string>
+    <string name="paynimo_card_type_v_label">Vaulted Cards</string>
+    <string name="paynimo_card_type_n_label">New Cards</string>
+    <string name="paynimo_card_title_label">CARDS</string>
+    <string name="paynimo_card_v_heading_label_many">SELECT FROM REGISTERED CARDS</string>
+    <string name="paynimo_card_v_heading_label_single">SELECT REGISTERED CARD</string>
+    <string name="paynimo_card_scan_overlay_note">Card image not captured for security purpose.</string>
+    <string name="paynimo_dialog_vaulted_field_card">Enter CVV</string>
+    <string name="paynimo_dialog_vaulted_field_imps">Enter OTP</string>
+    <string name="paynimo_cc_invalid_cvv">Incorrect CVV</string>
+
+    <string name="paynimo_card_show_si">Show SI Details</string>
+    <string name="paynimo_card_hide_si">Hide SI Details</string>
+    <string name="paynimo_card_view_si">View SI Details</string>
+
+    <!-- IMPS -->
+    <string name="paynimo_imps_vaulted_otp_hint">OTP</string>
+    <string name="paynimo_imps_title_label">IMPS</string>
+    <string name="paynimo_imps_mobile_number_label">Mobile number</string>
+    <string name="paynimo_imps_mobile_number_hint">Your registered mobile number</string>
+    <string name="paynimo_imps_mmid_label">MMID</string>
+    <string name="paynimo_imps_mmid_hint">Your Mobile Money Identifier</string>
+    <string name="paynimo_imps_otp_label">OTP</string>
+    <string name="paynimo_imps_otp_hint">Your One Time Password</string>
+    <string name="paynimo_invalid_mobilenumberMSG">Mobile no entered is not valid</string>
+    <string name="paynimo_invalid_mmidMSG">MMID entered is not valid</string>
+    <string name="paynimo_imps_trigger_btn_default">@string/paynimo_trigger_default</string>
+    <string name="paynimo_imps_type_v_label">Vaulted IMPS</string>
+    <string name="paynimo_imps_type_n_label">New IMPS</string>
+    <string name="paynimo_imps_v_heading_label">SELECT REGISTERED IMPS</string>
+    <string name="paynimo_cc_invalid_otp">Incorrect OTP value</string>
+    <string name="paynimo_imps_checkbox_label">Remember this IMPS for the next time</string>
+
+    <!-- EMANDATE_MODE -->
+    <string name="paynimo_netbanking_spinner_label">Select your preferred bank for this payment</string>
+    <string name="paynimo_netbanking_btn_pay_label">Pay</string>
+    <string name="paynimo_netbanking_bank_search_hint">SEARCH</string>
+
+    <!-- WebView -->
+    <string name="paynimo_webview_enter_user_id">Enter User ID</string>
+    <string name="paynimo_webview_enter_password">Enter Password</string>
+    
+    <!-- UPI -->
+    <string name="paynimo_upi_title_label">UPI</string>
+    <string name="paynimo_upi_note_label">Please note:</string>
+    <string name="paynimo_upi_note1_label">1. UPI is a payment system that enables you to make payment from your bank account via mobile.</string>
+    <string name="paynimo_upi_note2_label">2. For a UPI transaction to complete, you will need to enter your Payment Address issued by your bank. Authentication request will be sent on your mobile.</string>
+    <string name="paynimo_upi_checkbox_label">Remember this VPA for the next time</string>
+    <string name="paynimo_upi_checkbox_label_dynamic">Remember this %1$s for the next time</string>
+    <string name="paynimo_upi_other_apps">Other Apps</string>
+    
+    <!-- mVisa -->
+    <string name="paynimo_mvisa_title_label">mVISA</string>
+
+    <!-- Digital Mandate -->
+    <string name="paynimo_digital_mandate_accounts_label">ACCOUNTS</string>
+    <string name="paynimo_digital_mandate_details">DIGITAL MANDATE DETAILS</string>
+    <string name="paynimo_digital_mandate_select_bank">SELECT BANK</string>
+    <string name="paynimo_digital_mandate_selected_bank">SELECTED BANK</string>
+    <string name="paynimo_digital_mandate_card_details">CARD DETAILS</string>
+    <string name="paynimo_digital_mandate_authenticate_label">Authenticate Using</string>
+    <string name="paynimo_digital_mandate_register_through_account">Account</string>
+    <string name="paynimo_digital_mandate_register_through_card">Card</string>
+    <string name="paynimo_digital_mandate_btn_pay_label">Pay Q%1$s</string>
+    <string name="paynimo_digital_mandate_enter_selected_bank_ifsc">Please enter selected bank IFSC.</string>
+    <string name="paynimo_digital_mandate_ifsc_not_supported">This IFSC is not supported for Auto-Debit, please use any other IFSC.</string>
+    <string name="paynimo_digital_mandate_authenticate_now">AUTHENTICATE NOW</string>
+    <string name="paynimo_digital_mandate_register_now">REGISTER NOW</string>
+    <string name="paynimo_digital_mandate_biometric_note"><b><u>Note</u>:-</b>Please make sure biometric device is connected with this system.</string>
+    <string name="paynimo_digital_mandate_what_is_aadhar_vid">What is an Aadhaar Virtual ID?</string>
+    <string name="paynimo_digital_mandate_vid_details">VID is a temporary, revocable 16-digit random number mapped with the Aadhaar number. VID can be used in lieu of Aadhaar number whenever authentication or e-KYC or signing services are performed. Authentication may be performed using VID in a manner similar to using Aadhaar number.</string>
+    <string name="paynimo_digital_mandate_vid_use">If you already have a VID please click on authenticate now or click on below button to generate a VID and proceed ahead.</string>
+    <string name="paynimo_digital_mandate_btn_generate_vid_label">Generate Virtual ID*</string>
+    <string name="paynimo_digital_mandate_vid_note">*You will be redirected to UIDAI website for generating the VID</string>
+    <string name="paynimo_digital_mandate_invalid_pan_error_message">Enter valid PAN</string>
+    <string name="paynimo_digital_mandate_invalid_phone_no_error_message">Enter valid Phone No</string>
+    <string name="paynimo_digital_mandate_invalid_email_error_message">Enter valid Email ID</string>
+    <string name="paynimo_digital_mandate_invalid_mobile_no_error_message">Enter valid Mobile No</string>
+    <string name="paynimo_digital_mandate_invalid_acc_holder_name_error_message">Enter valid Account Holder Name</string>
+    <string name="paynimo_digital_mandate_invalid_acc_number_error_message">Enter valid Account Number</string>
+
+    <!-- OTP READ -->
+    <string name="paynimo_otp_otp_hint">Enter OTP</string>
+    <string name="paynimo_otp_authorize_btn_text">Authorize</string>
+    <string name="paynimo_otp_3dsecure_user_hint">Dont Want to Wait ..</string>
+    <string name="paynimo_otp_3dsecure_btn_text">Authorize on Bank page</string>
+
+    <!-- Custom Dialog -->
+    <string name="paynimo_custom_dialog_ok_label">Ok</string>
+    <string name="paynimo_custom_dialog_cancel_label">Cancel</string>
+    <string name="paynimo_custom_dialog_clear_label">Clear</string>
+    <string name="paynimo_custom_dialog_resend_label">Resend OTP</string>
+    <string name="paynimo_custom_dialog_submit_label">Submit</string>
+    <string name="paynimo_custom_dialog_title_new_incoming_message">New Message ...</string>
+    <string name="paynimo_custom_dialog_title_payment_error">Something went  wrong ...</string>
+
+    <!-- Back Press Dialog -->
+    <string name="paynimo_back_press_dialog_title">Confirm Abort...</string>
+    <string name="paynimo_back_press_dialog_message">Are you sure you want abort this?</string>
+    <string name="paynimo_back_press_dialog_ok_label">YES</string>
+    <string name="paynimo_back_press_dialog_cancel_label">NO</string>
+
+    <!-- WEBSERVICE Errors -->
+    <string name="paynimo_webservice_request_not_completed_error">Unable to retrieve data. Please check your Network Connection or server may be down ..</string>
+
+    <!-- Validation Error Messages -->
+    <string name="paynimo_invalidMSG">Invalid Entry ...</string>
+    <string name="paynimo_notAllowedCardMSG">Invalid Card ..</string>
+    <string name="paynimo_emptyMSG">Empty value ..</string>
+    <string name="paynimo_expiryMSG">Invalid Expiry ..</string>
+    <string name="paynimo_payments_error">There was an error. Please try with another Payment Options.</string>
+
+    <!-- Card Regex -->
+    <string name="regex_visa">^4[0-9]*</string>
+    <string name="regex_rupay">^(606([1-9])|607|608|652)</string>
+    <string name="regex_mastercard">^5[1-5][0-9]*</string>
+    <string name="regex_maestro">^(6220|5044|5018|5081|5020|5038|5893|6304|6331|6759|676[1-3]|6799|0604)[0-9]*</string>
+    <string name="regex_amex">^3[47][0-9]*</string>
+    <string name="regex_jcb">^35((28)|(29)|[3-8][0-9])[0-9]*</string>
+    <string name="regex_dinersclub">^(36|38|30[0-5])[0-9]*</string>
+    <string name="regex_discover">^(65|64[4-9]|6011|622(1(2[6-9]|[3-9][0-9])|[2-8][0-9]{2}|9([01][0-9]|2[0-5])))[0-9]*</string>
+    <string name="regex_unionpay">^62[0-9]*</string>
+    <string name="regex_instapayment">^63[7-9][0-9]*</string>
+    <string name="regex_laser">^(6704|6706|6771|6709)[0-9]*</string>
+    <string name="regex_ifsc">[A-Z|a-z|0-9]{11}</string>
+    <string name="regex_acc_holder_name">^[a-zA-Z0-9\'. ]+$</string>
+    <string name="regex_acc_no">^[a-zA-Z0-9]+$</string>
+    <string name="regex_pan">^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$</string>
+    <string name="regex_mobile">[0-9]{10}</string>
+    <string name="regex_number_only">[0-9]+</string>
+
+    <string name="regex_visa_partial">^4</string>
+    <string name="regex_rupay_partial">^(607802)</string>
+    <string name="regex_mastercard_partial">^5(?![^1-5])</string>
+    <string name="regex_maestro_partial">^5(?![^08])(0?(?![^123])(1?(?![^8])|2?(?![^0])|3?(?![^8]))|(?&lt;![^5])8?(?![^9])(?&lt;![^8])9?(?![^3]))|^6((?![^3])3?((?![^0])0?(?![^4])|(?![^3])(?&lt;![^3])3?(?![^1]))|(?![^7])7((?![^5])5?(?![^9])|(?![^6])6?(?![^1-3])|(?![^9])(?&lt;![^7])9(?![^9])))|^0(?![^6])6?(?![^0])0?(?![^4])</string>
+    <string name="regex_amex_partial">^3(?![^47])</string>
+    <string name="regex_jcb_partial">^3(?![^5])5?((?![^2])2?(?![^89])|(?![^3-8])(?&lt;![^5])[3-8]?)</string>
+    <string name="regex_dinersclub_partial">^3((?![^68])|0(?![^0-5]))</string>
+    <string name="regex_discover_partial">^6((?![^5])|(?![^4])4(?![^4-9])|(?![^0])0?($|(?![^1])1(?![^1])))</string>
+    <string name="regex_unionpay_partial">^6(?![^2])</string>
+    <string name="regex_instapayment_partial">^6(?![^3])3?(?![^7-9])</string>
+    <string name="regex_laser_partial">^6(?![^7])7?(?![^07])(0?(?![^469])|(?&lt;![^7])7?(?![^1]))</string>
+
+    <!-- Event Logging -->
+    <string name="paynimo_timestamp_simple_format">dd MMM yyyy HH:mm:ss:SSS</string>
+
+</resources>

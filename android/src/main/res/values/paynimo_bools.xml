@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="default_card_vault_value">false</bool>
+    <bool name="default_imps_vault_value">true</bool>
+    <bool name="default_enabling_card_scanner_value">false</bool>   
+    <bool name="default_enabling_card_si_value">false</bool>
+
+</resources>

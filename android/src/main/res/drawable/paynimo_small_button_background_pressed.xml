@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <corners android:radius="@dimen/paynimo_buttonPressedCornerRadius" />
+
+    <stroke
+        android:width="@dimen/paynimo_buttonPressedStrokeWidth"
+        android:color="@color/paynimo_textViewSITextColor" />
+
+    <solid android:color="@color/paynimo_textViewSITextColor" />
+
+    <padding
+        android:bottom="@dimen/paynimo_buttonHorizontalPadding"
+        android:left="@dimen/paynimo_buttonHorizontalPadding"
+        android:right="@dimen/paynimo_buttonHorizontalPadding"
+        android:top="@dimen/paynimo_buttonHorizontalPadding" />
+
+</shape>

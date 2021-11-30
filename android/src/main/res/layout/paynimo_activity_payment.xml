@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paynimo_backgroundColor" >
+
+    <include
+        android:id="@+id/paynimo_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/paynimo_loader"
+        android:visibility="gone"/>
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/application_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/paynimo_application_header" />
+
+    <!-- Header ends -->
+
+
+    <!-- footer -->
+
+    <include
+        android:id="@+id/application_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/paynimo_application_footer" />
+    <!-- footer ends -->
+
+    <!--<com.paynimo.android.payment.app.ButteryProgressBar
+        android:id="@+id/paynimo_loading_pb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/application_header" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/application_footer"
+        android:layout_below="@+id/application_header"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- ===========   Main Body Start =========== -->
+
+            <FrameLayout
+                android:id="@+id/paynimo_payment_fragmentHolder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- ===========   Main Body End =========== -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

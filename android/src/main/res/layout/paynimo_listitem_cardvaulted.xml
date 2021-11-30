@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/paynimo_list_selector"
+    android:padding="3dp" >
+
+    <!-- payment mode Image -->
+
+    <ImageView
+        android:id="@+id/paynimo_list_card_icon"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/paynimo_pm_default_icon" />
+
+    <!-- right arrow Image -->
+
+
+    <!-- label -->
+
+    <TextView
+        android:id="@+id/paynimo_list_delete_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="@dimen/paynimo_custom_radio_button_textSize"
+        android:textColor="@color/paynimo_app_color"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/paynimo_list_delete_icon"
+        android:layout_toRightOf="@+id/paynimo_list_card_icon"
+        android:orientation="vertical" >
+
+        <com.paynimo.android.payment.CustomTextView
+            android:id="@+id/paynimo_list_card_bankname_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="dfd"
+            android:textColor="@color/paynimo_textViewTextColor"
+            android:textSize="@dimen/paynimo_textView_textSize_vault_heading"
+            android:textStyle="bold" />
+
+        <com.paynimo.android.payment.CustomTextView
+            android:id="@+id/paynimo_list_card_cardno_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="dfd"
+            android:textColor="@color/paynimo_textViewTextColor"
+            android:textSize="@dimen/paynimo_textView_textSize_small" />
+    </LinearLayout>
+
+
+	<!--<ImageView
+        android:id="@+id/paynimo_list_arrow"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/paynimo_arrow_right" />-->
+	
+
+</RelativeLayout>

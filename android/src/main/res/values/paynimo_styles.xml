@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ButtonPaynimo" parent="android:Widget.Button">
+        <item name="android:background">@drawable/paynimo_button_background</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">@drawable/paynimo_button_fontcolor</item>
+        <item name="android:textSize">@dimen/paynimo_button_textSize</item>
+        <item name="android:paddingLeft">@dimen/paynimo_button_padding_left</item>
+        <item name="android:paddingRight">@dimen/paynimo_button_padding_left</item>
+        <item name="android:paddingTop">@dimen/paynimo_button_padding_top</item>
+        <item name="android:paddingBottom">@dimen/paynimo_button_padding_top</item>
+    </style>
+
+    <style name="ButtonSmallPaynimo" parent="android:Widget.Button">
+        <item name="android:background">@drawable/paynimo_small_button_background</item>
+        <item name="android:minHeight">44dip</item>
+        <item name="android:minWidth">60dip</item>
+        <item name="android:textColor">@drawable/paynimo_small_button_fontcolor</item>
+        <item name="android:textSize">@dimen/paynimo_button_textSize</item>
+        <item name="android:paddingLeft">@dimen/paynimo_button_padding_left</item>
+        <item name="android:paddingRight">@dimen/paynimo_button_padding_left</item>
+        <item name="android:paddingTop">@dimen/paynimo_button_padding_top</item>
+        <item name="android:paddingBottom">@dimen/paynimo_button_padding_top</item>
+    </style>
+
+    <style name="TextViewPaynimo" parent="android:Widget.TextView">
+        <item name="android:background">@color/paynimo_textViewBackgroundColor</item>
+        <item name="android:textColor">@color/paynimo_textViewTextColor</item>
+        <item name="android:textSize">@dimen/paynimo_textView_textSize_normal</item>
+        <item name="android:paddingLeft">@dimen/paynimo_textView_padding_left</item>
+        <item name="android:paddingRight">@dimen/paynimo_textView_padding_left</item>
+        <item name="android:paddingTop">@dimen/paynimo_textView_padding_top</item>
+        <item name="android:paddingBottom">@dimen/paynimo_textView_padding_top</item>
+    </style>
+
+    <style name="TextViewSmallPaynimo" parent="android:Widget.TextView">
+        <item name="android:background">@color/paynimo_textViewBackgroundColor</item>
+        <item name="android:textColor">@color/paynimo_textViewTextColor</item>
+        <item name="android:textSize">@dimen/paynimo_textView_textSize_address</item>
+        <item name="android:paddingLeft">@dimen/paynimo_textView_padding_left</item>
+        <item name="android:paddingRight">@dimen/paynimo_textView_padding_left</item>
+        <item name="android:paddingTop">@dimen/paynimo_textView_padding_top</item>
+        <item name="android:paddingBottom">@dimen/paynimo_textView_padding_top</item>
+    </style>
+
+    <style name="EditTextPaynimo" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/paynimo_edittext_border_bottom_line</item>
+        <item name="android:textColor">@color/paynimo_defaultTextColor</item>
+        <item name="android:textSize">@dimen/paynimo_editText_textSize</item>
+        <item name="android:paddingLeft">@dimen/paynimo_editText_padding_left</item>
+        <item name="android:paddingRight">@dimen/paynimo_editText_padding_left</item>
+        <item name="android:paddingTop">@dimen/paynimo_editText_padding_top</item>
+        <item name="android:paddingBottom">@dimen/paynimo_editText_padding_top</item>
+        <item name="android:textColorHint">@color/paynimo_defaultHintTextColor</item>
+    </style>
+
+    <style name="DialogStylePaynimo" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/paynimo_tabBgBlueColor</item>
+        <item name="colorAccent">@color/paynimo_tabBgBlueColor</item>
+        <item name="android:buttonBarPositiveButtonStyle" tools:targetApi="lollipop">@style/ButtonSmallPaynimo</item>
+        <item name="android:buttonBarNegativeButtonStyle" tools:targetApi="lollipop">@style/ButtonSmallPaynimo</item>
+    </style>
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/paynimo_backgroundColor"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:id="@+id/paynimo_note_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+		android:visibility="gone" >
+        <com.paynimo.android.payment.CustomTextView
+	    style="@style/TextViewPaynimo"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textColor="@android:color/black"
+	    android:text="@string/paynimo_upi_note_label" />
+	<com.paynimo.android.payment.CustomTextView
+	    style="@style/TextViewPaynimo"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/paynimo_upi_note1_label" />
+        <com.paynimo.android.payment.CustomTextView
+	    style="@style/TextViewPaynimo"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/paynimo_upi_note2_label" />
+    </LinearLayout>
+
+	<!--<com.paynimo.android.payment.CustomEditText
+		android:id="@+id/paynimo_et_search_bank"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/paynimo_edit_text_bg"
+		android:layout_margin="5dp"
+		android:inputType="textCapCharacters"
+		android:visibility="gone" />-->
+    <com.paynimo.android.payment.CustomEditText
+	    android:id="@+id/paynimo_et_search_bank"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#00000000"
+	    android:drawableLeft="@drawable/ic_menu_search_holo_light"
+	    android:drawablePadding="0dp"
+	    android:hint="@string/paynimo_netbanking_bank_search_hint"
+	    android:inputType="textCapCharacters"
+	    android:visibility="gone" />
+    
+    <ListView
+        android:id="@+id/paynimo_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:descendantFocusability="afterDescendants"
+		android:focusable="false"
+        android:background="@drawable/paynimo_list_selector"
+        android:divider="@color/paynimo_listDividerColor"
+        android:dividerHeight="1dp" />
+    
+    <com.paynimo.android.payment.CustomButton
+        android:id="@+id/paynimo_upi_pay_btn"
+        style="@style/ButtonPaynimo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/paynimo_imps_trigger_btn_default"
+        android:visibility="gone" />
+
+</LinearLayout>

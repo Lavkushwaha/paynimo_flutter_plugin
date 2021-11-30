@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@color/paynimo_backgroundColor"/>
+    <corners android:radius="2dp" />
+    <stroke android:color="@color/paynimo_defaultTextColor"
+        android:width="2dp" />
+
+</shape>

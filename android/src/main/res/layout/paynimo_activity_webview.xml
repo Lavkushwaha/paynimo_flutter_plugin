@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paynimo_backgroundColor"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/paynimo_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/paynimo_loader"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/paynimo_header"
+        layout="@layout/paynimo_application_header" />
+
+    <WebView
+        android:id="@+id/paynimo_webview_webkit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/paynimo_lyt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/paynimo_backgroundColor"
+        android:layout_below="@+id/paynimo_header"
+        android:padding="10dp"
+        android:visibility="gone">
+        <com.paynimo.android.payment.CustomEditText
+            android:id="@+id/paynimo_edit_user_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:hint="@string/paynimo_webview_enter_user_id"/>
+        <com.paynimo.android.payment.CustomEditText
+            android:id="@+id/paynimo_edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:hint="@string/paynimo_webview_enter_password"/>
+        <com.paynimo.android.payment.CustomButton
+            android:id="@+id/paynimo_btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/paynimo_custom_dialog_submit_label"/>
+    </LinearLayout>
+
+</RelativeLayout>

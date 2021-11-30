@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="paynimoUXTheme" parent="@style/_Paynimo"/>
+  
+    <style name="NoActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- <style name="_Paynimo" parent="Theme.AppCompat.Light.NoActionBar">
+        parent="Theme.AppCompat.Light"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar"
+    -->
+    <style name="_Paynimo" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyle">@style/ButtonPaynimo</item>
+        <item name="android:editTextStyle">@style/EditTextPaynimo</item>
+    </style>
+
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paynimo_backgroundColor" >
+
+    <include
+        android:id="@+id/paynimo_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/paynimo_loader"
+        android:visibility="gone"/>
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/application_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/paynimo_application_header" />
+
+    <!-- Header ends -->
+
+
+    <!-- footer -->
+
+    <include
+        android:id="@+id/application_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/paynimo_application_footer" />
+    <!-- footer ends -->
+
+    <LinearLayout
+        android:id="@+id/paynimo_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/application_footer"
+        android:layout_below="@+id/application_header"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/paynimo_payment_screens_padding"
+        android:visibility="invisible" >
+
+        <!-- ===========   Main Body Start =========== -->
+
+
+        <!-- *******   UI to show Bill amount Start ******** -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <com.paynimo.android.payment.CustomTextView
+                style="@style/TextViewPaynimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/paynimo_payment_mode_amount_label"
+                android:textColor="@color/paynimo_tabBgBlueColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.paynimo.android.payment.CustomTextView
+                android:id="@+id/paynimo_tv_amount_text"
+                style="@style/TextViewPaynimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="@string/paynimo_payment_mode_amount_rupee_label"
+                android:textColor="@color/paynimo_tabBgBlueColor"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.paynimo.android.payment.CustomTextView
+                android:id="@+id/paynimo_tv_payment_mode_amount"
+                style="@style/TextViewPaynimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="0dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- *******   UI to show Bill amount End ******** -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/paynimo_list_payment_vaulted_modes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/paynimo_listDividerColor"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/paynimo_list_selector" />
+
+            <!--
+                     <ListView
+                    android:id="@+id/paynimo_list_payment_modes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/paynimo_view_rounded_corner"
+                    android:divider="@color/paynimo_listDividerColor"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@drawable/paynimo_list_selector"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin" />
+            -->
+        </LinearLayout>
+
+        <!-- ===========   Main Body End =========== -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/paynimo_network_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/application_footer"
+        android:layout_below="@+id/application_header"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/paynimo_payment_screens_padding"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

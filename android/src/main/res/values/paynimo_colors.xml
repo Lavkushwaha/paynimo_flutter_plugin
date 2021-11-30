@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="paynimo_app_color">#d71921</color>
+    <color name="paynimo_backgroundColor">#FFFFFF</color>
+    <color name="paynimo_textColorHighlight">#d28286</color>
+    <!-- TextView Colors -->
+
+    <color name="paynimo_textViewTextColor">#2E2E2E</color>
+    <color name="paynimo_textViewBackgroundColor">#FFFFFF</color>
+    
+    <color name="paynimo_textViewSITextColor">#CB383D</color>
+
+    <color name="paynimo_textViewNoteTextColor">#4B4B4B</color>
+
+    <!-- EditText Colors -->
+
+    <color name="editTextBackgroundColor">#FFFFFF</color>
+    <color name="editTextBorderColor">#fed83d</color>
+    <color name="editTextInactiveBorderColor">#fed83d</color>
+    <color name="errorTextColor">#FFFF0000</color>
+    <color name="paynimo_defaultTextColor">#000000</color>
+    <color name="defaultTextColor">#000000</color>
+    <color name="paynimo_defaultHintTextColor">#BDBDBD</color>
+
+    <!-- Button Colors -->
+
+    <color name="paynimo_buttonDefaultStrokeColor">#a0e0b071</color>
+    <color name="paynimo_buttonDefaultColor">#447DD8</color>
+    <color name="paynimo_buttonPressedStrokeColor">#a0e0b071</color>
+    <color name="paynimo_buttonPressedColor">#87CEFA</color>
+    <color name="paynimo_buttonDefaultFontColor">#FFFFFF</color>
+    <color name="paynimo_buttonPressedFontColor">#FFFFFF</color>
+
+    <!-- Rounded view Colors -->
+
+    <color name="paynimo_roundedViewBorderColor">#cccccc</color>
+    <color name="paynimo_roundedViewBGColor">#FFFFFF</color>
+    <!-- listview Colors -->
+
+    <color name="paynimo_listDividerColor">#b5b5b5</color>
+    
+    <color name="paynimo_listRowBgColor">#FFFFFF</color>
+    
+    <color name="paynimo_logoBlueColor">#87CEFA</color>
+    <color name="paynimo_logoOrangeColor">#F75205</color>
+
+    <color name="paynimo_tabBgBlueColor">#447DD8</color>
+
+    <color name="paynimo_neft_noteColor">#878787</color>
+
+</resources>

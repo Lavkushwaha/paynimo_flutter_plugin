@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/paynimo_tabBgBlueColor"
+    android:orientation="vertical" >
+
+    <!-- android:background="@color/paynimo_logoBlueColor" sky blue color for trial -->
+    
+    <com.paynimo.android.payment.CustomTextView
+        android:id="@+id/paynimoListHeaderSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:visibility="visible" />
+    
+    <!-- android:textColor="#F75205" original color -->
+
+    <!--
+  style="@style/TextViewPaynimo"
+  android:background=""  -->
+
+</LinearLayout>
