@@ -99,8 +99,10 @@ public class FlutterPaynimoPlugin implements FlutterPlugin, MethodCallHandler, A
       result.error("no_activity", "esewa_pnp plugin requires a foreground activity.", null);
     }
 
-
-    if (call.method.equals("startPayment")) {
+    if(call.method.equals("configure")){
+      delegate.configure(call.argument("merchentId"),call.argument("publicKey"));
+    }
+    else if (call.method.equals("startPayment")) {
       // result.success("Android " + android.os.Build.VERSION.RELEASE);
     //   startPay();
       delegate.startPay(call,result);

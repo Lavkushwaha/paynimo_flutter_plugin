@@ -30,6 +30,10 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
     private Activity activity;
     // private MethodChannel.Result pendingResult;
 
+    private String MerchentId ="T750";
+    private String PublicKey = "1234-6666-6789-56";
+
+
     public static final int REQUEST_CODE_PAYTM = 0x00;
     private static final String TAG = "CheckoutActivity";
 
@@ -56,11 +60,20 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
         this.activity = activity;
     }
 
+    void configure(String merchentId, String publicKey) {
 
-     void startPay(MethodCall call, MethodChannel.Result result) {
+
+        this.MerchentId = merchentId != null ?merchentId:"T750";
+        this.PublicKey=publicKey != null?publicKey:"1234-6666-6789-56";
+
+    }
+
+
+
+        void startPay(MethodCall call, MethodChannel.Result result) {
 
         Checkout checkout = new Checkout();
-        checkout.setMerchantIdentifier("T750");
+        checkout.setMerchantIdentifier(MerchentId);
         checkout.setTransactionIdentifier(String.valueOf(new Date().getTime()));
         checkout.setTransactionReference("ORD0001");
         checkout.setTransactionType(PaymentActivity.TRANSACTION_TYPE_SALE);
@@ -79,7 +92,7 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
         Log.d("Checkout Request Object", checkout.getMerchantRequestPayload().toString());
         authIntent.putExtra(Constant.ARGUMENT_DATA_CHECKOUT, checkout);
         // Public Key
-        authIntent.putExtra(PaymentActivity.EXTRA_PUBLIC_KEY, "1234-6666-6789-56");
+        authIntent.putExtra(PaymentActivity.EXTRA_PUBLIC_KEY, PublicKey);
         // Requested Payment Mode
         authIntent.putExtra(PaymentActivity.EXTRA_REQUESTED_PAYMENT_MODE,
                 PaymentActivity.PAYMENT_METHOD_NETBANKING);
