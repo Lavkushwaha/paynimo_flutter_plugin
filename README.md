@@ -1,6 +1,8 @@
 # Paynimo(INGENICO) Payment Gateway Flutter
 
 Minimal Paynimo Paymeny Gateway Integration for Flutter.
+Paynimo V4.4
+
 
 ## Getting Started
 
