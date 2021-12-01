@@ -7,12 +7,18 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.google.gson.Gson;
 import com.paynimo.android.payment.PaymentActivity;
 import com.paynimo.android.payment.PaymentModesActivity;
 import com.paynimo.android.payment.model.Checkout;
 import com.paynimo.android.payment.util.Constant;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import io.flutter.Log;
 import io.flutter.plugin.common.MethodCall;
@@ -22,10 +28,28 @@ import io.flutter.plugin.common.PluginRegistry;
 public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultListener{
 
     private Activity activity;
-    private MethodChannel.Result pendingResult;
+    // private MethodChannel.Result pendingResult;
 
     public static final int REQUEST_CODE_PAYTM = 0x00;
     private static final String TAG = "CheckoutActivity";
+
+    private MethodChannel.Result techProcessPaymentResult;
+
+    private void onTechProcessPaymentFail(Map<String, Object> arguments) {
+        Map<String,Object> result=new HashMap<>();
+        result.put("status","failed");
+        result.put("data","Payment Payment failed");
+        result.put("errorCode",(String) arguments.get("errorCode"));
+        result.put("errorMessage",(String) arguments.get("errorMessage"));
+        techProcessPaymentResult.success(result);
+    }
+    private void onTechProcessPaymentSuccess(JSONObject data) {
+        Map<String,Object> result=new HashMap<>();
+        result.put("status","success");
+        result.put("data",data.toString());
+        techProcessPaymentResult.success(result);
+    }
+
 
 
     public FlutterPaynimoDelegate(Activity activity) {
@@ -36,31 +60,19 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
      void startPay(MethodCall call, MethodChannel.Result result) {
 
         Checkout checkout = new Checkout();
-        checkout.setMerchantIdentifier("T515688");
+        checkout.setMerchantIdentifier("T750");
         checkout.setTransactionIdentifier(String.valueOf(new Date().getTime()));
         checkout.setTransactionReference("ORD0001");
         checkout.setTransactionType(PaymentActivity.TRANSACTION_TYPE_SALE);
         checkout.setTransactionSubType(PaymentActivity.TRANSACTION_SUBTYPE_DEBIT);
         checkout.setTransactionCurrency("INR");
-        checkout.setTransactionAmount("50");
-        checkout.setTransactionDateTime("30-11-2021");
-        checkout.setConsumerIdentifier("10086");
-        checkout.setConsumerEmailID("rohitbhard@gmail.com");
-        checkout.setConsumerMobileNumber("8826120009");
+        checkout.setTransactionAmount("10");
+        checkout.setTransactionDateTime("1-12-2021");
+        checkout.setConsumerIdentifier("");
+        checkout.setConsumerEmailID("");
+        checkout.setConsumerMobileNumber("");
         checkout.setConsumerAccountNo("");
-        checkout.addCartItem("FIRST", "1", "0.0", "0.0", "", "", "", "");
-        checkout.setPaymentInstructionAction("Y");
-        checkout.setPaymentInstructionStartDateTime("30-11-2021");
-        checkout.setPaymentInstructionEndDateTime("25-02-2050");
-        checkout.setPaymentInstructionLimit("100");
-        checkout.setPaymentInstructionFrequency("ADHO");
-        checkout.setPaymentInstructionType("F");
-
-        checkout.setConsumerAccountHolderName("ROHIT BHARDWAJ");
-        checkout.setConsumerAccountType("Saving");
-        checkout.setConsumerAccountNo("031401543318");
-        checkout.setConsumerPan("AMDPB1252C"); //Consumer PAN
-        checkout.setConsumerPhoneNumber("8826120009"); //Consumer Phone Number
+        checkout.addCartItem("FIRST", "10", "0.0", "0.0", "", "", "", "");
 
         Intent authIntent = PaymentModesActivity.Factory.getAuthorizationIntent(activity.getApplicationContext(), true);
         // Checkout Object
@@ -81,13 +93,13 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
 
 
     @Override
-      public boolean onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    public boolean onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
 
         // Check which request we're responding to
         if (requestCode == PaymentActivity.REQUEST_CODE) {
             // Make sure the request was successful
-            if (resultCode == RESULT_OK) {
+            if (resultCode == PaymentActivity.RESULT_OK) {
                 Log.d(TAG, "Result Code :" + RESULT_OK);
                 if (data != null) {
                     try {
@@ -102,8 +114,35 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
                         if (checkout_res.getMerchantResponsePayload().getPaymentMethod().getPaymentTransaction().getStatusCode().equalsIgnoreCase(
                                 PaymentActivity.TRANSACTION_STATUS_SALES_DEBIT_SUCCESS)) {
                             Toast.makeText(activity.getApplicationContext(), "Transaction Status - Success", Toast.LENGTH_SHORT).show();
+
+                            //----------------
+                            try {
+                                Gson gson = new Gson();
+                                String jsonString = gson.toJson(checkout_res.getMerchantResponsePayload());
+                                JSONObject request = new JSONObject(jsonString);
+
+                                String statusCode = checkout_res.getMerchantResponsePayload().getPaymentMethod().getPaymentTransaction().getStatusCode();
+                                String amount = checkout_res.getMerchantResponsePayload().getPaymentMethod().getPaymentTransaction().getAmount();
+                                String merchantTransactionIdentifier = checkout_res.getMerchantResponsePayload().getMerchantTransactionIdentifier();
+                                String instrumentAliasName = checkout_res.getMerchantResponsePayload().getPaymentMethod().getInstrumentAliasName();
+                                String instrumentToken = checkout_res.getMerchantResponsePayload().getPaymentMethod().getInstrumentToken();
+
+                                request.put("amount", amount);
+                                request.put("orderId", merchantTransactionIdentifier);
+                                request.put("status", 1);
+                                request.put("instrumentAliasName", instrumentAliasName);
+                                request.put("instrumentToken", instrumentToken);
+
+                                onTechProcessPaymentSuccess(request);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
                             Log.v("TRANSACTION STATUS=>", "SUCCESS");
                             System.out.println("TRANSACTION_STATUS_SALES_DEBIT_SUCCESS");
+
+
                             /**
                              * TRANSACTION STATUS - SUCCESS (status code
                              * 0300 means success), NOW MERCHANT CAN PERFORM
@@ -167,6 +206,12 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
                             Toast.makeText(activity.getApplicationContext(),
                                     "Transaction Status - Failure",
                                     Toast.LENGTH_SHORT).show();
+
+                            String statusCode = checkout_res.getMerchantResponsePayload().getPaymentMethod().getPaymentTransaction().getStatusCode();
+                            Map<String, Object> errorArguments = new HashMap();
+                            errorArguments.put("errorCode", statusCode);
+                            errorArguments.put("errorMessage", "");
+                            onTechProcessPaymentFail(errorArguments);
                         }
                         String umrnNo = "";
                         String addDetails = checkout_res
@@ -249,6 +294,15 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
                             .show();
                     Log.d(TAG + " Code=>", error_code);
                     Log.d(TAG + " Desc=>", error_desc);
+
+                    Map<String, Object> errorArguments = new HashMap();
+                    errorArguments.put("errorCode", "");
+                    if (error_code.equals("ERROR_PAYNIMO_023")) {
+                        errorArguments.put("errorMessage", "Enter valid card details");
+                    } else {
+                        errorArguments.put("errorMessage", " ");
+                    }
+                    onTechProcessPaymentFail(errorArguments);
                 }
             } else if (resultCode == PaymentActivity.RESULT_CANCELED) {
                 Toast.makeText(activity.getApplicationContext(), "Transaction Aborted by User",
@@ -267,9 +321,9 @@ public class FlutterPaynimoDelegate implements  PluginRegistry.ActivityResultLis
 
 
 
-    private void clearMethodCallAndResult() {
-        pendingResult = null;
-    }
+    // private void clearMethodCallAndResult() {
+    //     pendingResult = null;
+    // }
 
 
 }
