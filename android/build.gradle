@@ -21,6 +21,7 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 
+
 android {
     compileSdkVersion 30
 
@@ -34,7 +35,10 @@ android {
     }
 }
 
+
+
 dependencies {
+//    implementation files('/Users/incals/Documents/flutter/bin/cache/artifacts/engine/android-x64/flutter.jar')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
