@@ -57,8 +57,10 @@ class _MyAppState extends State<MyApp> {
           // child: Text('Running on: $_platformVersion\n'),
           child: ElevatedButton(
             child: Text("Start pay"),
-            onPressed: () {
-              FlutterPaynimo.startPayment();
+            onPressed: () async {
+              Map<dynamic, dynamic> paymentResult =
+                  await FlutterPaynimo.startPayment();
+              print("LAV : ${paymentResult.toString()}");
             },
           ),
         ),

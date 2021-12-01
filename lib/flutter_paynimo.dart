@@ -11,6 +11,6 @@ class FlutterPaynimo {
   }
 
   static Future startPayment() async {
-    await _channel.invokeMethod('startPayment');
+    return await _channel.invokeMethod('startPayment');
   }
 }
