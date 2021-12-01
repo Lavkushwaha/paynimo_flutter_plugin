@@ -8,6 +8,8 @@ A Flutter plugin for Android Paynimo Payment Gateway Integration.
 
 ## Features
 
+https://github.com/Lavkushwaha/paynimo_flutter_plugin/blob/master/paynimo.mp4
+
 * Initialize the payment gateway with the merchant credentials
 * Make a payment request
 * Handle the payment response
