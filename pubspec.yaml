@@ -1,6 +1,6 @@
 name: flutter_paynimo
 description: A new flutter plugin project.
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
@@ -30,8 +30,8 @@ flutter:
       android:
         package: com.example.flutter_paynimo
         pluginClass: FlutterPaynimoPlugin
-      ios:
-        pluginClass: FlutterPaynimoPlugin
+      # ios:
+      #   pluginClass: FlutterPaynimoPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
