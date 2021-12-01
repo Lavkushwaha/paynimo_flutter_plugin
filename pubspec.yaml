@@ -1,7 +1,8 @@
 name: flutter_paynimo
 description: A new flutter plugin project.
 version: 0.0.2
-homepage:
+homepage: https://github.com/Lavkushwaha/paynimo_flutter_plugin
+repository: https://github.com/Lavkushwaha/paynimo_flutter_plugin
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
