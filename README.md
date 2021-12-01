@@ -1,6 +1,6 @@
 # Flutter Paynimo Payment Gateway - flutter_paynimo
 
-[![pub package](https://img.shields.io/pub/v/camera.svg)](https://pub.dev/packages/flutter_paynimo)
+[![pub package](https://img.shields.io/pub/v/flutter_paynimo.svg)](https://pub.dev/packages/flutter_paynimo)
 
 A Flutter plugin for Android Paynimo Payment Gateway Integration.
 
