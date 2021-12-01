@@ -1,6 +1,6 @@
-# flutter_paynimo_example
+# Paynimo(INGENICO) Payment Gateway Flutter
 
-Demonstrates how to use the flutter_paynimo plugin.
+Minimal Paynimo Paymeny Gateway Integration for Flutter.
 
 ## Getting Started
 
