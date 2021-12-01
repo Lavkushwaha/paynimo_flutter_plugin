@@ -10,6 +10,22 @@ class FlutterPaynimo {
     return version;
   }
 
+  /// CONFIGURE PAYMENT PARAMETERS
+  /// MERCHENT ID - Your Paynimo merchant ID
+  /// PUBLIC KEY - Your Paynimo public key
+
+  static Future configure({
+    String? merchantId,
+    String? publicKey,
+  }) async {
+    var paynimoData = {
+      "merchantId": "$merchantId",
+      "publicKey": "$publicKey",
+    };
+    return await _channel.invokeMethod('configure', paynimoData);
+  }
+
+  /// START PAYMENT
   static Future startPayment() async {
     return await _channel.invokeMethod('startPayment');
   }
